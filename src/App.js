@@ -13,7 +13,9 @@ function App() {
   const handleEquals = () => {
     try {
      
-      setDisplay(eval(display).toString());
+      const result = new Function('return ' + display)();
+setDisplay(result.toString());
+
     } catch {
       setDisplay("Error");
     }
