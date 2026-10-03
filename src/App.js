@@ -13,9 +13,13 @@ function App() {
   const handleEquals = () => {
     try {
      
+<<<<<<< HEAD
       const result = new Function('return ' + display)();
 setDisplay(result.toString());
 
+=======
+      setDisplay(eval(display).toString());
+>>>>>>> 0d206ecf43e567c8c92abbff89a4c0fed4f11c08
     } catch {
       setDisplay("Error");
     }
